@@ -4,10 +4,10 @@ local QBCore = exports['qb-core']:GetCoreObject()
 local tableModel = 'v_ret_ml_tableb'
 local tableCoords = vector3(941.98, -123.13, 74.42)
 
-Citizen.CreateThread(function()
-    joaat(tableModel)
+CreateThread(function()
+    RequestModel(tableModel)
     while not HasModelLoaded(tableModel) do
-        Citizen.Wait(0)
+        Wait(0)
     end
 
     local tableEntity = CreateObject(tableModel, tableCoords.x, tableCoords.y, tableCoords.z, false, false, false)
