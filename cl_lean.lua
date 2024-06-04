@@ -2,12 +2,12 @@ local ox_target = exports.ox_target
 local QBCore = exports['qb-core']:GetCoreObject()
 
 local tableModel = 'v_ret_ml_tableb'
-local tableCoords = vector3(941.98, -123.13, 74.42)
+local tableCoords = vector3(473.58, -629.74, 23.91)
 
-CreateThread(function()
+Citizen.CreateThread(function()
     RequestModel(tableModel)
     while not HasModelLoaded(tableModel) do
-        Wait(0)
+        Citizen.Wait(0)
     end
 
     local tableEntity = CreateObject(tableModel, tableCoords.x, tableCoords.y, tableCoords.z, false, false, false)
@@ -38,4 +38,29 @@ CreateThread(function()
             end,
         }
     })
+end)
+
+local function ecstasyEffect()
+    local startStamina = 30
+    SetFlash(0, 0, 500, 7000, 500)
+    while startStamina > 0 do
+        Wait(1000)
+        startStamina -= 1
+        RestorePlayerStamina(PlayerId(), 1.0)
+        if math.random(1, 100) < 51 then
+            SetFlash(0, 0, 500, 7000, 500)
+            ShakeGameplayCam('SMALL_EXPLOSION_SHAKE', 0.08)
+        end
+    end
+    if IsPedRunning(PlayerPedId()) then
+        SetPedToRagdoll(PlayerPedId(), math.random(1000, 3000), math.random(1000, 3000), 3, false, false, false)
+    end
+end
+
+exports('useLean', function(data, slot)
+     exports.ox_inventory:useItem(data, function(data)
+         if data then
+            ecstasyEffect(source)
+         end
+    end)
 end)
