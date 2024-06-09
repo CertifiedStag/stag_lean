@@ -8,11 +8,11 @@ AddEventHandler('stag_lean:server:MakeLean', function()
     local hasItem3 = Player.Functions.GetItemByName('antihistemine')
     if hasItem and hasItem2 and hasItem3 then
         -- Remove the items required to make lean
-        Player.Functions.RemoveItem('coughsyrup', 1)
-        Player.Functions.RemoveItem('kurkakola', 1)
-        Player.Functions.RemoveItem('antihistemine', 1)
+        Player.Functions.RemoveItem('coughsyrup', Config.CSAmount)
+        Player.Functions.RemoveItem('kurkakola', Config.KKAmount)
+        Player.Functions.RemoveItem('antihistemine', Config.ANAmount)
         -- Add the lean item
-        Player.Functions.AddItem('lean', 1)
+        Player.Functions.AddItem('lean', Config.recieveAmount)
         
         -- Notify the player
         TriggerClientEvent('QBCore:Notify', source, 'Created That Lean!', 'success', 1000)
