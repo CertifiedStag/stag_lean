@@ -1,3 +1,4 @@
+local Config = {}
 local QBCore = exports['qb-core']:GetCoreObject()
 
 RegisterServerEvent('stag_lean:server:MakeLean')
