@@ -1,3 +1,4 @@
+print('CertifiedStag Productions, Script Loaded')
 local QBCore = exports['qb-core']:GetCoreObject()
 
 RegisterServerEvent('stag_lean:server:MakeLean')
