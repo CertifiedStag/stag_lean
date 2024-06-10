@@ -1,3 +1,4 @@
+local Config = Config or {}
 local ox_target = exports.ox_target
 local QBCore = exports['qb-core']:GetCoreObject()
 
