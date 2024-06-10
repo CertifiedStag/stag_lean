@@ -66,7 +66,7 @@ end
 exports('useLean', function(data, slot)
      exports.ox_inventory:useItem(data, function(data)
          if data then
-            ecstasyEffect(source)
+            ecstasyEffect()
          end
     end)
 end)
