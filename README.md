@@ -29,6 +29,4 @@ If using qb-target, use cl_lean_qbtarget.lua, rename to cl_lean and remove the o
 		}
 	},`
 
-  # Customisation of location and prop are done in cl_lean.lua
-
   # Discord: https://discord.gg/GRyqv5yfST
