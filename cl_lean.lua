@@ -1,9 +1,11 @@
-local Config = Config or {}
 local ox_target = exports.ox_target
 local QBCore = exports['qb-core']:GetCoreObject()
 
-local tableModel = Config.tableProp
-local tableCoords = Config.tableLoc
+local tableModel = Config.TableProp
+local tableCoords = Config.TableLoc
+
+print(tableModel)
+print(tableCoords)
 
 Citizen.CreateThread(function()
     RequestModel(tableModel)

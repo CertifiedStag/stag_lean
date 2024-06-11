@@ -6,13 +6,15 @@ Description 'Lean Creation'
 version '1.0.0'
 
 server_scripts {
-    'sv_lean.lua',
-    'config.lua'
+    'config.lua',
+    'sv_lean.lua'
+    
 }
 
 client_scripts {
-    'cl_lean.lua',
-    'config.lua'
+    'config.lua',
+    'cl_lean.lua'
+    
 }
 
 lua54 'yes'
