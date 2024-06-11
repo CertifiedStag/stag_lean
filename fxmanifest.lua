@@ -10,7 +10,8 @@ server_scripts {
 }
 
 client_scripts {
-    'cl_lean.lua'
+    'cl_lean.lua',
+    'config.lua'
 }
 
 lua54 'yes'
