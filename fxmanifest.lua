@@ -6,7 +6,8 @@ Description 'Lean Creation'
 version '1.0.0'
 
 server_scripts {
-    'sv_lean.lua'
+    'sv_lean.lua',
+    'config.lua'
 }
 
 client_scripts {
