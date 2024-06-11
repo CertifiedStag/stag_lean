@@ -1,9 +1,9 @@
-print('stag_lean', 'Version 1.0', 'Loaded')
+local Config = Config or {}
 local ox_target = exports.ox_target
 local QBCore = exports['qb-core']:GetCoreObject()
 
-local tableModel = 'v_ret_ml_tableb'
-local tableCoords = vector3(-1103.27, -1599.55, 3.67)
+local tableModel = Config.tableProp
+local tableCoords = Config.tableLoc
 
 Citizen.CreateThread(function()
     RequestModel(tableModel)
@@ -12,7 +12,7 @@ Citizen.CreateThread(function()
     end
 
     local tableEntity = CreateObject(tableModel, tableCoords.x, tableCoords.y, tableCoords.z, false, false, false)
-    SetEntityHeading(tableEntity, 122.0)
+    SetEntityHeading(tableEntity, Config.heading)
     FreezeEntityPosition(tableEntity, true)
 
     -- Add the target options to the table
@@ -21,7 +21,7 @@ Citizen.CreateThread(function()
             icon = "fa-solid fa-bottle",
             label = "Make Lean",
             onSelect = function()
-                QBCore.Functions.Progressbar("creating_lean", "Mixing Ingredients", 5000, false, true, {
+                QBCore.Functions.Progressbar("creating_lean", "Mixing Ingredients", Config.creationTime, false, true, {
                     disableMovement = true,
                     disableCarMovement = false,
                     disableMouse = false,
