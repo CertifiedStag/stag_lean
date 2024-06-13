@@ -5,15 +5,15 @@ If using qb-target, use cl_lean_qbtarget.lua, rename to cl_lean and remove the o
 
 # Add to qb-core/shared/items.lua
 
- `--Lean
+ --Lean
  
     lean = { name = 'lean', label = 'Lean', weight = 0, type = 'item', image = 'lean.png', unique = true, useable = true, shouldClose = true, combinable = nil, description = 'Lean...' },
     coughsyrup = { name = 'coughsyrup', label = 'Cough Syrup', weight = 0, type = 'item', image = 'coughsyrup.png', unique = true, useable = true, shouldClose = true, combinable = nil, description = 'For that tickly throat' },
     antihistemine = { name = 'antihistemine', label = 'Antihistemine', weight = 0, type = 'item', image = 'antihistemine.png', unique = true, useable = true, shouldClose = true, combinable = nil, description = 'Got allergies?' },
-    kurkakola = { name = 'kurkakola', label = 'Cola', weight = 500, type = 'item', image = 'cola.png', unique = false, useable = true, shouldClose = true, combinable = nil, description = 'For all the thirsty out there' },`
+    kurkakola = { name = 'kurkakola', label = 'Cola', weight = 500, type = 'item', image = 'cola.png', unique = false, useable = true, shouldClose = true, combinable = nil, description = 'For all the thirsty out there' },
 
 # Add to ox_inventory/data/items.lua
-`["lean"] = {
+["lean"] = {
 		label = "Lean",
 		weight = 0,
 		stack = true,
@@ -27,6 +27,6 @@ If using qb-target, use cl_lean_qbtarget.lua, rename to cl_lean and remove the o
 			export = "stag_lean.useLean",
 			image = "lean.png",
 		}
-	},`
+	},
 
   # Discord: https://discord.gg/GRyqv5yfST
