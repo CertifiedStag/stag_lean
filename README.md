@@ -27,6 +27,6 @@ If using qb-target, use cl_lean_qbtarget.lua, rename to cl_lean and remove the o
 			export = "stag_lean.useLean",
 			image = "lean.png",
 		}
-	},
+	},`
 
   # Discord: https://discord.gg/GRyqv5yfST
