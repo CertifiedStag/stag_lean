@@ -13,7 +13,7 @@ If using qb-target, use cl_lean_qbtarget.lua, rename to cl_lean and remove the o
     kurkakola = { name = 'kurkakola', label = 'Cola', weight = 500, type = 'item', image = 'cola.png', unique = false, useable = true, shouldClose = true, combinable = nil, description = 'For all the thirsty out there' },
 
 # Add to ox_inventory/data/items.lua
-["lean"] = {
+`["lean"] = {
 		label = "Lean",
 		weight = 0,
 		stack = true,
