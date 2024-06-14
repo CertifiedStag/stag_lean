@@ -1,5 +1,6 @@
 Config = {
 
+Target = 'qb',
 -- Here you can change the prop used for the table.
 TableProp = 'v_ret_ml_tableb',
 
