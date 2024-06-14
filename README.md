@@ -1,8 +1,6 @@
 # stag_lean
 A Simple Lean Creation Script
 
-If using qb-target, use cl_lean_qbtarget.lua, rename to cl_lean and remove the original.
-
 # Add to qb-core/shared/items.lua
 
  --Lean
